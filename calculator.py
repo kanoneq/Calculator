@@ -4,7 +4,7 @@ from tkinter import messagebox
 root = tk.Tk()
 
 root.title("Calculator (by kanoneq :D)")
-root.geometry("600x750")
+root.geometry("1000x400")
 
 label = tk.Label(root, text = "Welcome to my calculator!", font=('Arial', 18))
 label.pack()
@@ -46,7 +46,9 @@ btn0 = tk.Button(buttonframe, text="0", font=("Arial", 18))
 btn0.grid(row=3, column=1, sticky=tk.W+tk.E)
 
 btn_eq = tk.Button(buttonframe, text="=", font=("Arial", 18))
-btn_eq.grid(row=3, column=0, sticky=tk.W+tk.E)
+btn_eq.grid(row=3, column=2, sticky=tk.W+tk.E)
+btn_dot = tk.Button(buttonframe, text=".", font=("Arial", 18))
+btn_dot.grid(row=3, column=0, sticky=tk.W+tk.E)
 
 btn_add = tk.Button(buttonframe, text="+", font=("Arial", 18))
 btn_add.grid(row=0, column=3, sticky=tk.W+tk.E)
@@ -61,8 +63,8 @@ btn_div = tk.Button(buttonframe, text="/", font=("Arial", 18))
 btn_div.grid(row=3, column=3, sticky=tk.W+tk.E)
 
 btn_dot = tk.Button(buttonframe, text=".", font=("Arial", 18))
-btn_dot.grid(row=3, column=2, sticky=tk.W+tk.E)
+btn_dot.grid(row=3, column=0, sticky=tk.W+tk.E)
 
-buttonframe.pack(fill='x')
+buttonframe.pack(fill='x', side=tk.BOTTOM)
 
 root.mainloop()
