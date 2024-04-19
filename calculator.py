@@ -57,10 +57,10 @@ btn_sub.grid(row=1, column=3, sticky=tk.W+tk.E)
 btn_mul = tk.Button(buttonframe, text="*", font=("Arial", 18))
 btn_mul.grid(row=2, column=3, sticky=tk.W+tk.E)
 
-btn_div = tk.Button(buttonframe, text=":", font=("Arial", 18))
+btn_div = tk.Button(buttonframe, text="/", font=("Arial", 18))
 btn_div.grid(row=3, column=3, sticky=tk.W+tk.E)
 
-btn_dot = tk.Button(buttonframe, text="=", font=("Arial", 18))
+btn_dot = tk.Button(buttonframe, text=".", font=("Arial", 18))
 btn_dot.grid(row=3, column=2, sticky=tk.W+tk.E)
 
 buttonframe.pack(fill='x')
