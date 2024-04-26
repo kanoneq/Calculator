@@ -9,20 +9,20 @@ root.geometry("500x400")
 #Cframe (thingy for backspace and "C" button)
 Cframe = tk.Frame(root)
 Cframe.columnconfigure(0, weight=1)
-Cframe.columnconfigure(1, weight=2)
+Cframe.columnconfigure(1, weight=1)
 
 def clear():
     empty: str = ""
     Label.configure(text=empty)
 btnC = tk.Button(Cframe, text="C", font=('Arial', 20), command=clear)
-btnC.grid(row=0, column=0, sticky=tk.W+tk.E)
+btnC.grid(row=0, column=0, sticky=tk.W)
 
 def back():
     new = Label["text"]
     new = new[:len(new)-1]
     Label.configure(text=new)
 btnback = tk.Button(Cframe, text="backspace", font=('Arial', 20), command=back)
-btnback.grid(row=0, column=1, sticky=tk.W+tk.E)
+btnback.grid(row=0, column=1, sticky=tk.E)
 
 Cframe.pack(fill="x")
 #end of Cframe
@@ -30,11 +30,12 @@ Cframe.pack(fill="x")
 #label which shows what user is typing into calculator
 Label = tk.Label(root, text="", font=('Arial', 20))
 Label.pack(padx=5, pady=20)
+#end of the label, and start of the adding function
 def adding(string: str):
     current = Label["text"]
     new = current + string
     Label.configure(text=new)
-#end of the label
+#end of the function
 
 #buttonframe is basically every button on the bottom of the calculator
 buttonframe = tk.Frame(root)
